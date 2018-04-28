@@ -36,3 +36,19 @@ nav{
     margin-top: -500px;
     background: linear-gradient(to bottom right, #48a1afaa, #232423aa);
 }
+
+
+.centro{
+    width: 920px;
+    margin: auto;
+}
+
+.zona-util{
+    background: linear-gradient(to right, transparent , black);
+    position: absolute;
+    width: 300px;
+    height: 478px;
+    margin-top: -483px;
+    margin-left: 550px;
+    border-right: 11px solid #c4170c;
+}
