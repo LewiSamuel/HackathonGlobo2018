@@ -5,6 +5,10 @@ html, body{
     padding: 0;
 }
 
+body{
+    background-color: #fafafa;
+}
+
 nav{
     height: 70px;
     width: 100%;
@@ -14,4 +18,21 @@ nav{
     font-weight: bolder;
     font-size: 35px;
     line-height: 70px;
+}
+
+.bloco{
+    padding: 35px;
+    border: 1px solid #EEE;
+}
+
+
+.layer{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.up-layer-graph{
+    margin-top: -500px;
+    background: linear-gradient(to bottom right, #48a1afaa, #232423aa);
 }
