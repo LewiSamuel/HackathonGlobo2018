@@ -4,8 +4,8 @@
 			labels: ['Fora Diego', 'Fora Glavy', 'Top Top', 'Pithon em Python', 'Quero café', 'Meditar', 'Mãe to na globo'],
 			datasets: [{
 				label: 'Relevância',
-				backgroundColor: "#ff8a65",
-				// borderColor: window.chartColors.red,
+				backgroundColor: "#ff8a65aa",
+				borderColor: "#ff8a65",
 				borderWidth: 1,
 				data: [90,40,30,20,10,10,9]
             }]
