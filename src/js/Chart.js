@@ -10723,7 +10723,7 @@ defaults._set('global', {
 	},
 	onClick: null,
 	defaultColor: 'rgba(0,0,0,0.1)',
-	defaultFontColor: '#666',
+	defaultFontColor: '#FFF',
 	defaultFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 	defaultFontSize: 12,
 	defaultFontStyle: 'normal',

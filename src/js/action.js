@@ -1,21 +1,14 @@
 	var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var color = Chart.helpers.color;
 		var horizontalBarChartData = {
-			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+			labels: ['Fora Diego', 'Fora Glavy', 'Top Top', 'Pithon em Python', 'Quero café', 'Meditar', 'Mãe to na globo'],
 			datasets: [{
-				label: 'Dataset 1',
-				backgroundColor: "blue",
+				label: 'Relevância',
+				backgroundColor: "#ff8a65",
 				// borderColor: window.chartColors.red,
 				borderWidth: 1,
-				data: [-5]
-            },
-            {
-				label: 'Dataset 1',
-				backgroundColor: "red",
-				// borderColor: window.chartColors.red,
-				borderWidth: 1,
-				data: [-5]
-			},]
+				data: [90,40,30,20,10,10,9]
+            }]
 
 		};
 
@@ -32,13 +25,18 @@
 							borderWidth: 2,
 						}
 					},
-					responsive: true,
+                    responsive: true,
+                    scaleFontColor: "#FFFFFF",
+                    color: "white",
 					legend: {
-						position: 'bottom',
+                        position: 'bottom',
+                        color: "white",
+                        display: false
 					},
 					title: {
 						display: true,
-						text: 'Top TOP'
+                        text: 'Top TOP',
+                        color: "white"
 					}
 				}
 			});
