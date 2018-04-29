@@ -12,7 +12,7 @@ body{
 nav{
     height: 70px;
     width: 100%;
-    background-color: #c4170c;
+    background-color: #ec7d00;
     color: white;
     text-align: center;
     font-weight: bolder;
@@ -22,7 +22,8 @@ nav{
 
 .bloco{
     padding: 35px;
-    border: 1px solid #EEE;
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
 }
 
 
@@ -50,7 +51,7 @@ nav{
     height: 478px;
     margin-top: -483px;
     margin-left: 550px;
-    border-right: 11px solid #c4170c;
+    border-right: 11px solid #ec7d00;
 }
 
 
