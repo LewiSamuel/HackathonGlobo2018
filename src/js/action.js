@@ -16,10 +16,11 @@
 		labels: [],
 		datasets: [{
 			label: 'Relevância',
-			backgroundColor: "#ff3d00aa",
-			borderColor: "#ff3d00",
+			backgroundColor: ["#fb8c00","#ffc107","#ffee58"],
+			borderColor: "#fb8c00",
 			borderWidth: 1,
-			data: []
+			data: [],
+			hoverBackgroundColor: ["#fb8c00aa","#ffc107aa","#ffee58aa"]
 		}]
 
 	};
@@ -34,7 +35,7 @@
 			window.myHorizontalBar.data.labels = []
 			window.myHorizontalBar.data.datasets[0].data = []
 			child.forEach(element => {
-				window.myHorizontalBar.data.labels.push(element["word"]);
+				window.myHorizontalBar.data.labels.push(element["word"] + " (" + element['freq'] + ")");
 				window.myHorizontalBar.data.datasets[0].data.push(element["freq"]);
 				palavras.push(element)
 				window.myHorizontalBar.update();
@@ -72,8 +73,27 @@
 				title: {
 					display: true,
 					text: 'Assuntos mais falados',
-					color: "white"
-				}
+					color: "white",
+					fontSize: 18
+				},
+				scales: {
+						xAxes: [{
+						  gridLines: {
+							color: '#ffffff77',
+							lineWidth: 0.7
+						  }
+						}],
+						yAxes: [{
+							gridLines: {
+							  color: '#ffffff77',
+							  lineWidth: 0.7
+							}
+						  }]
+				  },
+				  hover: {
+					mode: 'nearest',
+					intersect: true
+				  }
 			}
 		});
 
@@ -85,11 +105,11 @@
 				var label = window.myHorizontalBar.data.labels[firstPoint._index];
 				var value = window.myHorizontalBar.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
 				palavras.forEach(element => {
-					if (element['word'] === label){
+					if ((element["word"] + " (" + element['freq'] + ")") === label){
 						window.myHorizontalBar.data.labels = []
 						window.myHorizontalBar.data.datasets[0].data = []
 						element['related'].forEach(elem => {
-							window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"]);
+							window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"] + " (" + elem["freq"] + ")");
 							window.myHorizontalBar.data.datasets[0].data.push(elem["freq"]);
 							window.myHorizontalBar.update();
 						});
