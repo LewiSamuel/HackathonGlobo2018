@@ -26,7 +26,7 @@ var horizontalBarChartData = {
 };
 
 var database = firebase.database();
-var starCountRef = firebase.database().ref('topico');
+var starCountRef = firebase.database().ref('twitter');
 starCountRef.on('value', function(snapshot) {
     if (snapshot.val() != null){
         var child = (Object.values(snapshot.val()))[0]['data'];
@@ -35,7 +35,7 @@ starCountRef.on('value', function(snapshot) {
         window.myHorizontalBar.data.labels = []
         window.myHorizontalBar.data.datasets[0].data = []
         child.forEach(element => {
-            window.myHorizontalBar.data.labels.push(element["word"]);
+            window.myHorizontalBar.data.labels.push(`${element["word"]} (${element["name"]})`);
             window.myHorizontalBar.data.datasets[0].data.push(element["freq"]);
             palavras.push(element)
             window.myHorizontalBar.update();
@@ -88,29 +88,29 @@ window.onload = function() {
         }
     });
 
-    $("#canvas").click(
-        function (evt) {
-            var activePoints = window.myHorizontalBar.getElementsAtEvent(evt);
+    // $("#canvas").click(
+    //     function (evt) {
+    //         var activePoints = window.myHorizontalBar.getElementsAtEvent(evt);
 
-            var firstPoint = activePoints[0];
-            var label = window.myHorizontalBar.data.labels[firstPoint._index];
-            var value = window.myHorizontalBar.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
-            palavras.forEach(element => {
-                if (element["word"] === label){
+    //         var firstPoint = activePoints[0];
+    //         var label = window.myHorizontalBar.data.labels[firstPoint._index];
+    //         var value = window.myHorizontalBar.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+    //         palavras.forEach(element => {
+    //             if (element["word"] === label){
 
-                    window.myHorizontalBar.data.datasets[0].backgroundColor = ["#00695c","#0097a7","#03a9f4"];
-                    window.myHorizontalBar.data.datasets[0].borderColor = "#00695c";
-                    window.myHorizontalBar.data.labels = []
-                    window.myHorizontalBar.data.datasets[0].data = []
-                    element['related'].forEach(elem => {
-                        window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"]);
-                        window.myHorizontalBar.data.datasets[0].data.push(elem["freq"]);
-                        window.myHorizontalBar.update();
-                    });
-                }
-            });
-        }
-    ); 
+    //                 window.myHorizontalBar.data.datasets[0].backgroundColor = ["#00695c","#0097a7","#03a9f4"];
+    //                 window.myHorizontalBar.data.datasets[0].borderColor = "#00695c";
+    //                 window.myHorizontalBar.data.labels = []
+    //                 window.myHorizontalBar.data.datasets[0].data = []
+    //                 element['related'].forEach(elem => {
+    //                     window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"]);
+    //                     window.myHorizontalBar.data.datasets[0].data.push(elem["freq"]);
+    //                     window.myHorizontalBar.update();
+    //                 });
+    //             }
+    //         });
+    //     }
+    // ); 
 
 };
 
