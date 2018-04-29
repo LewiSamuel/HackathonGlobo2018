@@ -30,6 +30,9 @@
 	starCountRef.on('value', function(snapshot) {
 		if (snapshot.val() != null){
 			var child = (Object.values(snapshot.val()))[0]['data'];
+
+			window.myHorizontalBar.data.datasets[0].backgroundColor = ["#fb8c00", "#ffc107", "#ffee58"];
+			window.myHorizontalBar.data.datasets[0].borderColor = "#fb8c00";
 	
 			palavras = [];
 			window.myHorizontalBar.data.labels = []
