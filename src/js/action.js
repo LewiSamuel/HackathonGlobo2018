@@ -35,7 +35,7 @@
 			window.myHorizontalBar.data.labels = []
 			window.myHorizontalBar.data.datasets[0].data = []
 			child.forEach(element => {
-				window.myHorizontalBar.data.labels.push(element["word"] + " (" + element['freq'] + ")");
+				window.myHorizontalBar.data.labels.push(element["word"]);
 				window.myHorizontalBar.data.datasets[0].data.push(element["freq"]);
 				palavras.push(element)
 				window.myHorizontalBar.update();
@@ -77,23 +77,14 @@
 					fontSize: 18
 				},
 				scales: {
-						xAxes: [{
-						  gridLines: {
-							color: '#ffffff77',
-							lineWidth: 0.7
-						  }
-						}],
-						yAxes: [{
-							gridLines: {
-							  color: '#ffffff77',
-							  lineWidth: 0.7
-							}
-						  }]
-				  },
-				  hover: {
-					mode: 'nearest',
-					intersect: true
-				  }
+					xAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+						}]
+				},
+				maintainAspectRatio: true
+
 			}
 		});
 
@@ -105,11 +96,14 @@
 				var label = window.myHorizontalBar.data.labels[firstPoint._index];
 				var value = window.myHorizontalBar.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
 				palavras.forEach(element => {
-					if ((element["word"] + " (" + element['freq'] + ")") === label){
+					if (element["word"] === label){
+
+						window.myHorizontalBar.data.datasets[0].backgroundColor = ["#00695c","#0097a7","#039be5"];
+						window.myHorizontalBar.data.datasets[0].borderColor = "#00695c";
 						window.myHorizontalBar.data.labels = []
 						window.myHorizontalBar.data.datasets[0].data = []
 						element['related'].forEach(elem => {
-							window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"] + " (" + elem["freq"] + ")");
+							window.myHorizontalBar.data.labels.push(element['word'] + ' ' + elem["word"]);
 							window.myHorizontalBar.data.datasets[0].data.push(elem["freq"]);
 							window.myHorizontalBar.update();
 						});
