@@ -1,13 +1,13 @@
 	var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var color = Chart.helpers.color;
 		var horizontalBarChartData = {
-			labels: ['Fora Diego', 'Fora Glavy', 'Top Top', 'Pithon em Python', 'Quero café', 'Meditar', 'Mãe to na globo'],
+			labels: ['Fora Diego', 'Fora Glavy', 'Top Top', 'Pithon em Python', 'Quero café'],
 			datasets: [{
 				label: 'Relevância',
-				backgroundColor: "#ff8a65aa",
-				borderColor: "#ff8a65",
+				backgroundColor: "#ff3d00aa",
+				borderColor: "#ff3d00",
 				borderWidth: 1,
-				data: [90,40,30,20,10,10,9]
+				data: [90,40,30,20,10]
             }]
 
 		};
@@ -35,7 +35,7 @@
 					},
 					title: {
 						display: true,
-                        text: 'Top TOP',
+                        text: 'Assuntos mais falados',
                         color: "white"
 					}
 				}

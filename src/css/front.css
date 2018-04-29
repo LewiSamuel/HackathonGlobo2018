@@ -52,3 +52,13 @@ nav{
     margin-left: 550px;
     border-right: 11px solid #c4170c;
 }
+
+
+.graph{
+    height: 170px;
+    width: 220px;
+    float: right;
+    margin-top: 135px;
+    margin-right: -3px;
+    overflow: hidden;
+}
