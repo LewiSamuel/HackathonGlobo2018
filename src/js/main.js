@@ -72,7 +72,7 @@ window.onload = function() {
             },
             title: {
                 display: true,
-                text: 'Assuntos mais falados',
+                text: 'Assuntos twitter #HackathonGlobo',
                 color: "white",
                 fontSize: 18
             },
