@@ -98,7 +98,7 @@
 				palavras.forEach(element => {
 					if (element["word"] === label){
 
-						window.myHorizontalBar.data.datasets[0].backgroundColor = ["#00695c","#0097a7","#039be5"];
+						window.myHorizontalBar.data.datasets[0].backgroundColor = ["#00695c","#0097a7","#03a9f4"];
 						window.myHorizontalBar.data.datasets[0].borderColor = "#00695c";
 						window.myHorizontalBar.data.labels = []
 						window.myHorizontalBar.data.datasets[0].data = []
