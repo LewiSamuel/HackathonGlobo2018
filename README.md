@@ -1,6 +1,8 @@
 # ComentAI
 
-Ferramenta de curadoria de comentários em tempo real para transmissões ao vivo. Utilizando 
+![Logo](https://image.ibb.co/nQ7fyn/Screen_Shot_2018_05_03_at_13_06_22.png)
+
+Ferramenta de curadoria de comentários em tempo real para transmissões ao vivo.
 
 O projeto ganhou segundo lugar no **Hackathon Globo 2018**. Para mais informações sobre o projeto, ver nossa [apresentação](https://drive.google.com/open?id=1udZiGtWOKd-5vjKwt2JuvtaZe5UH7M9vF23higs1zX8).
 
